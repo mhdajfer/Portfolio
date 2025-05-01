@@ -4,6 +4,7 @@ import "./globals.css";
 
 const Jersey = Jersey_15({
   weight: "400",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
