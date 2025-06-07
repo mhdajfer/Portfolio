@@ -4,11 +4,12 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <div className="flex gap-5 p-4 items-center justify-center text-center">
+    <div className="md:flex gap-5 p-4 items-center justify-center text-center">
       <motion.div
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.2 }}
+        className="flex items-center justify-center"
       >
         <Image
           src="/profile-pic.jpg"
