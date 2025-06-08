@@ -20,7 +20,7 @@ const HeroSection = () => {
           className="rounded-full object-cover"
         />
       </motion.div>
-      <div className="mt-4 w-lg">
+      <div className="mt-4 w-lg flex flex-col items-center justify-center gap-2">
         <motion.h1
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -34,6 +34,7 @@ const HeroSection = () => {
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.2, ease: "easeInOut", delay: 1 }}
+          className="w-sm md:w-lg"
         >
           a dynamic Full Stack Developer radiating enthusiasm for building
           sleek, high-impact web apps! Armed with MERN stack mastery, Next.js
