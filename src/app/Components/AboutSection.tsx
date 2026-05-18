@@ -87,7 +87,7 @@ const AboutSection = () => {
                 letterSpacing: "0.05em",
               }}
             >
-              // stack
+              {'// stack'}
             </p>
             <ul
               style={{

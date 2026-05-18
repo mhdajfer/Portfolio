@@ -78,7 +78,7 @@ const ContactSection = () => {
             letterSpacing: "0.05em",
           }}
         >
-          // built with Next.js &mdash; {new Date().getFullYear()}
+          {'// built with Next.js'} &mdash; {new Date().getFullYear()}
         </p>
       </motion.div>
     </section>

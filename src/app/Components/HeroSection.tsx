@@ -20,7 +20,7 @@ const HeroSection = () => {
             marginBottom: "1.5rem",
           }}
         >
-          // full stack developer
+          {'// full stack developer'}
         </p>
 
         <div
