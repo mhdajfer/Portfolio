@@ -1,50 +1,126 @@
-import React from "react";
-import Image from "next/image";
+"use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <div className="md:flex gap-5 p-4 items-center justify-center text-center">
+    <section style={{ paddingTop: "4rem", paddingBottom: "8rem" }}>
       <motion.div
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.2 }}
-        className="flex items-center justify-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <Image
-          src="/profile-pic.jpg"
-          alt="profile pic"
-          width={150}
-          height={150}
-          priority={true}
-          className="rounded-full object-cover"
-        />
-      </motion.div>
-      <div className="mt-4 w-lg flex flex-col items-center justify-center gap-2">
-        <motion.h1
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.2, ease: "easeInOut", delay: 0.5 }}
-          className="text-2xl"
+        <p
+          style={{
+            fontFamily: "var(--font-mono)",
+            fontSize: "0.7rem",
+            color: "var(--text-muted)",
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            marginBottom: "1.5rem",
+          }}
         >
-          Hello, I am Mhd Ajfer
-        </motion.h1>
+          // full stack developer
+        </p>
 
-        <motion.p
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.2, ease: "easeInOut", delay: 1 }}
-          className="w-sm md:w-lg"
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            justifyContent: "space-between",
+            gap: "2rem",
+            flexWrap: "wrap",
+          }}
         >
-          a dynamic Full Stack Developer radiating enthusiasm for building
-          sleek, high-impact web apps! Armed with MERN stack mastery, Next.js
-          flair, and a love for crisp, efficient code, I confidently craft
-          delightful user experiences. My vibrant energy and knack for solving
-          puzzles bring every project to life. Excited to sprinkle some magic on
-          your next big idea—let&apos;s create something extraordinary!
-        </motion.p>
-      </div>
-    </div>
+          <div style={{ flex: 1, minWidth: "220px" }}>
+            <h1
+              style={{
+                fontSize: "clamp(2.8rem, 8vw, 5rem)",
+                fontWeight: 700,
+                color: "var(--text-primary)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.02em",
+                marginBottom: "2rem",
+              }}
+            >
+              Mhd Ajfer
+            </h1>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.25, duration: 0.5 }}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginBottom: "2.5rem",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "clamp(0.9rem, 2.5vw, 1.2rem)",
+                  color: "var(--accent)",
+                  fontWeight: 400,
+                }}
+              >
+                building things for the web
+              </span>
+              <span className="cursor" />
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              style={{
+                fontSize: "0.95rem",
+                color: "var(--text-secondary)",
+                lineHeight: 1.8,
+                maxWidth: "32rem",
+              }}
+            >
+              Full stack developer who cares about clean architecture,
+              maintainable systems, and shipping software that holds up. I work
+              across the full stack — from system design to production.
+            </motion.p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            style={{ flexShrink: 0 }}
+          >
+            <div
+              style={{
+                width: "100px",
+                height: "100px",
+                borderRadius: "50%",
+                padding: "2px",
+                background:
+                  "linear-gradient(135deg, var(--accent), transparent)",
+              }}
+            >
+              <Image
+                src="/profile-pic.jpg"
+                alt="Mhd Ajfer"
+                width={100}
+                height={100}
+                priority
+                style={{
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  width: "100%",
+                  height: "100%",
+                  display: "block",
+                }}
+              />
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
   );
 };
 
